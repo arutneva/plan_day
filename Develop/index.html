@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <title>Work Day Scheduler</title>
@@ -20,60 +21,112 @@
     <p id="currentDay" class="lead"></p>
   </header>
   <div class="container">
+
     <!-- Timeblocks go here -->
-    <div class="row time-block">
+
+    <div id="hr9" class="row time-block">
       <div class="col-sm-1 hour">9am</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="9" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr10" class="row time-block">
       <div class="col-sm-1 hour">10am</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="10" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr11" class="row time-block">
       <div class="col-sm-1 hour">11am</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="11" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr12" class="row time-block">
       <div class="col-sm-1 hour">12pm</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="12" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr13" class="row time-block">
       <div class="col-sm-1 hour">1pm</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="13" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr14" class="row time-block">
       <div class="col-sm-1 hour">2pm</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="14" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr15" class="row time-block">
       <div class="col-sm-1 hour">3pm</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="15" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr16" class="row time-block">
       <div class="col-sm-1 hour">4pm</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="16" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
-    <div class="row time-block">
+    <div id="hr17" class="row time-block">
       <div class="col-sm-1 hour">5pm</div>
-      <textarea class="col-sm-10 description"></textarea>
-      <button class="col-sm-1 saveBtn">Save</button>
+      <textarea id="17" class="col-sm-10 description"></textarea>
+      <button class="col-sm-1 saveBtn"><i class="fa-solid fa-floppy-disk"></i></button>
     </div>
   </div>
 
 
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+
+  <script>
+
+
+
+    $('#9').val(localStorage.getItem('#9'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#9', $('#9').val())
+    })
+
+    $('#10').val(localStorage.getItem('#10'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#10', $('#10').val())
+    })
+
+    $('#11').val(localStorage.getItem('#11'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#11', $('#11').val())
+    })
+
+    $('#12').val(localStorage.getItem('#12'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#12', $('#12').val())
+    })
+
+    $('#13').val(localStorage.getItem('#13'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#13', $('#13').val())
+    })
+
+    $('#14').val(localStorage.getItem('#14'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#14', $('#14').val())
+    })
+
+    $('#15').val(localStorage.getItem('#15'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#15', $('#15').val())
+    })
+
+    $('#16').val(localStorage.getItem('#16'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#16', $('#16').val())
+    })
+
+    $('#17').val(localStorage.getItem('#17'))
+    $('.saveBtn').on('click', function () {
+      localStorage.setItem('#17', $('#17').val())
+    })
+
+  </script>
+
   <script src="./index.js"></script>
 
 </body>
