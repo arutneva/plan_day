@@ -2,7 +2,7 @@
 
   ## Description
   
-This project allows you to plan a work day from 9am to 5pm, it is also color coded to let you know what hour you are on. 
+This project allows you to plan a work day from 9am to 5pm.
   
   ## Table of Contents (Optional)
   

@@ -10,6 +10,7 @@ function displayDay() {
 }
 
 function timeColors() {
+    
     for (let i = 0; i < hrs.length; i++) {
         if (currentHour > hrs[i]){
             $('#' + hrs[i]).addClass('past')
